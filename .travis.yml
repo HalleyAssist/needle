@@ -1,8 +1,6 @@
 language: node_js
 
 node_js:
-  - "0.10"
-  - "0.12"
   - "lts/argon"
   - "lts/boron"
   - "lts/carbon"
@@ -10,5 +8,5 @@ node_js:
 
 before_script:
   - mkdir -p test/keys
-  - cp /etc/travis/ssl/ssl.key test/keys
-  - cp /etc/travis/ssl/ssl.cert test/keys
+  - openssl genrsa -out test/keys/ssl.key 2048
+  - openssl req -new -key test/keys/ssl.key -x509 -days 999 -out test/keys/ssl.cert
