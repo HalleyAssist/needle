@@ -9,4 +9,4 @@ node_js:
 before_script:
   - mkdir -p test/keys
   - openssl genrsa -out test/keys/ssl.key 2048
-  - openssl req -new -key test/keys/ssl.key -x509 -days 999 -out test/keys/ssl.cert
+  - openssl req -new -key test/keys/ssl.key -x509 -days 999 -out test/keys/ssl.cert -subj "/C=US/ST=Foo/L=Bar/O=Red Hat, Inc./CN=localhost"
