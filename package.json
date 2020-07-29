@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "debug": "^2.1.2",
-    "iconv-lite": "^0.4.4",
+    "iconv": "3.0.0",
     "sax": "^1.2.4"
   },
   "devDependencies": {
